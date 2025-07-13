@@ -1,15 +1,10 @@
-title: "10x Multiomic RNA + ATAC Profiling — Pig Kidney (Single-Nuclei)"
-author: "Nasim Rahmatpour"
-date: "2023-12-13"
-output:
-  html_document:
-  toc: true
-toc_depth: 2
-toc_float: true
-number_sections: true
-theme: readable
----
-  
+
+# ------------------------------------------------------------------------------
+# title: 10x Multiomic RNA + ATAC Profiling — Pig Kidney (Single-Nuclei)
+# Author: Nasim Rahmatpour
+# Date: 2023-12-13
+# ------------------------------------------------------------------------------
+
 ###Task 1: Data Processing and Quality Control
 #libraries
 library(Seurat) 
