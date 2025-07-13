@@ -1,11 +1,22 @@
 
 # ------------------------------------------------------------------------------
-# title: 10x Multiomic RNA + ATAC Profiling — Pig Kidney (Single-Nuclei)
+# title: "10x Multiomic RNA + ATAC Profiling — Pig Kidney (Single-Nuclei)"
 # Author: Nasim Rahmatpour
 # Date: 2023-12-13
 # ------------------------------------------------------------------------------
 
+# Project Overview
+#Multiomic single-nuclei data from two pig kidney samples (P0906 and P0909) were processed to explore gene expression and chromatin accessibility using the WNN (Weighted Nearest Neighbor) approach. This project aims to:
+  
+# - Perform modality-specific QC and filtering on RNA and ATAC data
+# - Apply WNN-based multimodal integration to define biologically meaningful clusters
+# - Annotate cell types based on known kidney-specific markers from literature
+
+---
+
+
 ###Task 1: Data Processing and Quality Control
+  
 #libraries
 library(Seurat) 
 suppressMessages(require(cowplot))
@@ -112,6 +123,7 @@ write.csv(get_median(`P0909`), paste0("./Dinaqor2/dinaqor_RNA_ATAC.out/", "P0909
 
 
 ###Task 2: WNN Integration and Cell Type Annotation
+
 #standard analysis for each RNA and ATAC data
 standard_analysis <- function(x){
   DefaultAssay(x) <- "RNA"
